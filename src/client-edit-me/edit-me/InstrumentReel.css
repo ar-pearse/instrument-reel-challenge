@@ -1,3 +1,53 @@
-/**
- * ✅ You can edit this file to add your own styles.
- */
+.container {
+  overflow-x: hidden;
+  border-left: 2px solid rgb(56, 175, 254);
+  border-right: 2px solid rgb(255, 110, 57);
+}
+
+.reel {
+  display: flex;
+  width: fit-content;
+}
+
+.animated {
+  animation: scrolling 15s linear infinite;
+}
+
+.animated:hover {
+  animation-play-state: paused;
+}
+
+.instrument {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 10px;
+  border: 1px solid rgb(74, 113, 157);
+  background-color: rgb(7, 25, 41);
+  align-items: center;
+}
+
+.instrument > * {
+  margin-right: 10px;
+  width: 70px;
+  text-align: center;
+}
+
+.instrument:hover {
+  background-color: rgb(19, 51, 80);
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.image {
+  width: 18px;
+  height: 18px;
+}
